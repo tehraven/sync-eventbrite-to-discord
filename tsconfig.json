@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "lib": ["ES2021"],
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "compiled",
+    "esModuleInterop": true
+  },
+  "exclude": ["compiled", "node_modules"]
+}

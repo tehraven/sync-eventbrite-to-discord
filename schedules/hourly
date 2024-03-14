@@ -1,0 +1,3 @@
+#!/bin/sh
+cd /home/sync-eventbrite-to-discord
+ts-node --swc ./scripts/sync-eventbrite-to-discord.ts

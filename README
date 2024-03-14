@@ -1,0 +1,22 @@
+# Setup
+
+You need to create a Discord Bot and add that Bot to your Discord server.
+You also need to have access to your EventBrite account to create an API Key (as yourself)
+
+## Discord Bot
+
+1. https://discord.com/developers/applications
+2. Create New Application
+3. General Info - Just add the App Icon, Name, and Description. Take note of the Application ID.
+4. OAuth2 - You don't need this unless you are using your bot with external toosl like Integromt (they'll help you, if so)
+5. Bot - Enable all Priviledged Gateway Intents (If you expand this code you will thank me later). Click the Reset Token and store that token in the `.env` file as `DISCORD_BOT_TOKEN`
+6. Browse to `https://discord.com/api/oauth2/authorize?client_id={BOT ID FROM STEP 3}&permissions=8&scope=bot%20applications.commands` - note the `BOT ID FROM STEP 3` bit.
+7. Get your Discord Guild/Server's ID and save that to `.env` as `DISCORD_SERVER_ID`
+
+## EventBrite
+
+1. Log into EventBrite.com
+2. Go to Account Settings - Developer Links - API Keys ( https://www.eventbrite.com/account-settings/apps )
+3. Create API Key. For Application URL put in your website or Discord Invite URL, whatever works.
+4. Get an oAuth Token from ( https://www.eventbrite.com/platform/docs/authentication#get-a-private-token ), save that token to your `.env` as `EVENTBRITE_PERSONAL_OAUTH_TOKEN`
+5. Run the EventBrite API to get `/events/${some-event-id}` to see your Org ID in the API. Save that to your `.env` as `EVENTBRITE_ORGANIZATION_API_ID`
